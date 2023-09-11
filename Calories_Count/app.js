@@ -6,7 +6,7 @@ $(document).ready(function () {
     let ajouterAliments = $("#ajouterAlimentBtn");
     let listeAliments = $("#listeAliments");
     let graphiqueCalories = $("#graphiqueCalories")
-    // let graphiqueCalories2 = $("#graphiqueCalories2")
+    
 
     
     ajouterAliments.on("click", function () {
@@ -54,8 +54,7 @@ $(document).ready(function () {
         let labels = [];
         let data = [];
 
-        // On parcour le tableaux des aliments
-        // auquel on exécute une foinction sur chacun ces éléments
+       
         $.each(aliments, function(index, aliment){
             labels.push(aliment.nom);
             data.push(aliment.calories);
@@ -89,39 +88,3 @@ $(document).ready(function () {
         });
     }    
 });
-
-
- // function cummulGraphe() {
-    //     let totalCal = 0;
-    //     for (let i = 0; i < aliments.length; i++){
-    //         totalCal += aliments[i].calories
-    //         console.log(totalCal)
-    //     }
-    //     if (typeof chart1 !== "undefined"){
-    //         chart1.destroy();
-    //     }
-    
-    //     let ctx1 = graphiqueCalories2[0].getContext("2d");
-    //         chart1 = new Chart(ctx1, {
-    //             type: "bar",
-    //             data: {
-    //                 labels: aliments.length,
-    //                 datasets: [
-    //                     {
-    //                         label: "Calories total Consommées",
-    //                         data: totalCal,
-    //                         backgroundColor: "rgba(66, 133, 244, 0.6)"
-    //                     }
-    //                 ]
-    //             },
-    
-    //             options : {
-    //                 responsive: true,
-    //                 scales: {
-    //                     y: {
-    //                         beginAtZero: true
-    //                     }
-    //                 }
-    //             }
-    //         });
-    // }
